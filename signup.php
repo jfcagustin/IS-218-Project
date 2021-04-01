@@ -29,8 +29,15 @@ if (isset($_REQUEST['email'])){
     $major = $_REQUEST['major'];
     $major = mysqli_real_escape_string($conn,$major);
 
-    $query    = "INSERT into `accounts` (fname, lname, email, password, college, major)
-                     VALUES ('$fname', '$lname', '$email', '$password', '$college', '$major')";
+    $team = $_REQUEST['team'];
+    $team = mysqli_real_escape_string($conn,$team);
+
+    $manager = $_REQUEST['manager'];
+    $manager = mysqli_real_escape_string($conn,$manager);
+    
+
+    $query    = "INSERT into `accounts` (fname, lname, email, password, college, major, team, manager)
+                     VALUES ('$fname', '$lname', '$email', '$password', '$college', '$major', '$team', '$manager')";
     $result = mysqli_query($conn,$query);
 
     if($result){
@@ -58,6 +65,12 @@ if (isset($_REQUEST['email'])){
             </label><input id="password" type="password" name="password" pattern="(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{1,}" title="Enter a password with 1 special character" placeholder="Enter a password with 1 special character" required><br>
             </label><input id="college" name="college" type="text" placeholder="Enter the college you attend" required><br>
             <input id="major" name="major" type="text" placeholder="Enter the major you are studying" required><br>
+            <input id="team" name="team" type="text" placeholder="Enter the team will you be joining" required><br>
+            <label for="manager">Are you a project manager:</label>
+            <select name="manager" id="manager">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
             <input type="submit" class="button" name="submit" onsubmit="validate()" value="Sign up!" style = "font-family: manropeextralight;">
 			<h5> Already have a TaskTrack.io account? Click <a href='login.php' >here</a> to login and to access your tasks!</h5>
         </form>

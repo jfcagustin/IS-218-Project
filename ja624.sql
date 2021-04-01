@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `ja624`
+-- Database: `sh585`
 --
 
 -- --------------------------------------------------------
@@ -33,33 +33,38 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `email` varchar(30) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
   `college` varchar(20) DEFAULT NULL,
-  `major` varchar(20) DEFAULT NULL
+  `major` varchar(20) DEFAULT NULL,
+  `team` varchar(36) DEFAULT NULL,
+  `manager` varchar(20) DEFAULT NULL
+  
+
+
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `fname`, `lname`, `email`, `password`, `college`, `major`) VALUES
-(1, 'Mike', 'Lee', 'mjlee@njit.edu', '1234', 'NJIT', 'CS'),
-(2, 'Jane', 'Doe', 'janedoe@njit.edu', '4321', 'NJIT', 'Liberal Arts'),
-(3, 'Justin', 'Agustin', 'ja624@njit.edu', 'pass1', 'NJIT', 'IT'),
-(4, 'Ibrahim', 'Hamza', 'ih56@njit.edu', 'pass2', 'MSU', 'Architecture'),
-(5, 'Jenna', 'Ariza', 'jla39@njit.edu', 'pass3', 'NYU', 'HCI'),
-(6, 'Michelle', 'Majano', 'mm275@njit.edu', 'pass4', 'RUNB', 'Business & IS'),
-(7, 'John', 'Doe', 'jd123@njit.edu', '1234', 'NJIT', 'Business'),
-(22, 'J1', 'A1', 'j1a1@gmail.com', '1234', 'njit', 'none'),
-(23, 'just1', 'jlkasd', 'nasd@fsadf.com', 'fasjlk', 'fasjljl', 'fajlka'),
-(24, 'just1', 'jlkasd', 'nasd@fsadf.com', 'fasjlk', 'fasjljl', 'fajlka'),
-(25, 'Jen', 'Hamza', 'jh123@gmail.com', '54321!', 'Columbia', 'Law'),
-(26, 'Justin', 'Agustin', 'ja123@gmail.com', '1234!', 'NJIT', 'COMP E'),
-(27, 'Jayjoon', 'Sin', 'js555@rutgers.edu', 'Pass!', 'Rutgers', 'Business Management'),
-(28, 'Jayjoon', 'Sin', 'js555@rutgers.edu', 'Pass!', 'Rutgers', 'Business Management'),
-(29, 'Jayjoon', 'Sin', 'jaysin@rutgers.edu', '1234!', 'Rutgers', 'sanflknosd'),
-(30, 'Justin', 'Agustin', 'justin@agustin.com', 'Hello!', 'NJIT', 'HCI'),
-(31, 'Cooper', 'The Dog', 'ctd@pup.com', '1234!', 'Doggo Uni', 'Fetch'),
-(32, 'art', 'hamza', 'ih11@njit.edu', 'art!', 'njit', 'hci'),
-(33, 'Jamal', 'Hamza', 'jh123@kinz.org', '1234!', 'KU', 'Car Sales');
+INSERT INTO `accounts` (`id`, `fname`, `lname`, `email`, `password`, `college`, `major`, `team`, `manager`) VALUES
+(1, 'Mike', 'Lee', 'mjlee@njit.edu', '1234', 'NJIT', 'CS', 'tech', 'true'),
+(2, 'Jane', 'Doe', 'janedoe@njit.edu', '4321', 'NJIT', 'Liberal Arts', 'english', 'true'),
+(3, 'Justin', 'Agustin', 'ja624@njit.edu', 'pass1', 'NJIT', 'IT', 'tech', 'false'),
+(4, 'Ibrahim', 'Hamza', 'ih56@njit.edu', 'pass2', 'MSU', 'Architecture', 'designer', 'true'),
+(5, 'Jenna', 'Ariza', 'jla39@njit.edu', 'pass3', 'NYU', 'HCI', 'tech', 'false'),
+(6, 'Michelle', 'Majano', 'mm275@njit.edu', 'pass4', 'RUNB', 'Business & IS', 'business', 'true'),
+(7, 'John', 'Doe', 'jd123@njit.edu', '1234', 'NJIT', 'Business', 'business', 'false'),
+(22, 'J1', 'A1', 'j1a1@gmail.com', '1234', 'njit', 'none', 'business', 'false'),
+(23, 'just1', 'jlkasd', 'nasd@fsadf.com', 'fasjlk', 'fasjljl', 'fajlka', 'business', 'false'),
+(24, 'just1', 'jlkasd', 'nasd@fsadf.com', 'fasjlk', 'fasjljl', 'fajlka', 'business', 'false'),
+(25, 'Jen', 'Hamza', 'jh123@gmail.com', '54321!', 'Columbia', 'Law', 'law', 'false'),
+(26, 'Justin', 'Agustin', 'ja123@gmail.com', '1234!', 'NJIT', 'COMP E', 'tech', 'false'),
+(27, 'Jayjoon', 'Sin', 'js555@rutgers.edu', 'Pass!', 'Rutgers', 'Business Management', 'business', 'false'),
+(28, 'Jayjoon', 'Sin', 'js555@rutgers.edu', 'Pass!', 'Rutgers', 'Business Management', 'business', 'true'),
+(29, 'Jayjoon', 'Sin', 'jaysin@rutgers.edu', '1234!', 'Rutgers', 'sanflknosd', 'business', 'false'),
+(30, 'Justin', 'Agustin', 'justin@agustin.com', 'Hello!', 'NJIT', 'HCI', 'tech', 'false'),
+(31, 'Cooper', 'The Dog', 'ctd@pup.com', '1234!', 'Doggo Uni', 'Fetch', 'tech', 'false'),
+(32, 'art', 'hamza', 'ih11@njit.edu', 'art!', 'njit', 'hci', 'tech', 'false'),
+(33, 'Jamal', 'Hamza', 'jh123@kinz.org', '1234!', 'KU', 'Car Sales', 'tech', 'false');
 
 -- --------------------------------------------------------
 

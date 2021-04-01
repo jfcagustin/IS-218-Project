@@ -47,6 +47,20 @@ body{
   border-radius: 24px;
   transition: 0.25s;
 }
+.box label[for = "manager"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: auto auto 10px auto;
+  text-align: center;
+  border: 2px solid #E1F2FE; /*#3498db*/
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
 .box input[type = "text"]:focus,.box input[type = "password"]:focus, .box input[type = "email"]:focus{
   width: 280px;
   border-color: #2ecc71; /* #2ecc71*/

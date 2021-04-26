@@ -7,16 +7,16 @@
 </head>
 <body>
 <form class="logout" style="position: absolute; top:2%; right:2%;">
-<p><img src="user.png" style="vertical-align: middle; margin-right: 3px;"><?php
+<p style= "color: #004080"><img src="user.png" style="vertical-align: middle; margin-right: 3px;"><?php
 require('connect.php');
 include('auth_session.php');
 echo $_SESSION['lname'] . ', ' . $_SESSION['fname']; ?></p>
 <input type="submit" class="button" name="logout" value="Logout" formaction="logout.php" style="border:0;
-  background: #272635;
+  background: #008080;
   display: block;
   margin: auto;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #004080;
   padding: 7px 20px;
   outline: none;
   color: white;

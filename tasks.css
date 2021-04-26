@@ -8,10 +8,10 @@
 }
 
 a:link {
-  color: black;
+  color: #004080;
   background-color: transparent;
   text-decoration: none;
-  border: 1px solid black;
+  border: 1px solid #004080;
   border-radius: 5px;
   background: #F0F6F6;
   padding-left: 2px;
@@ -19,10 +19,10 @@ a:link {
 }
 
 a:visited {
-  color: black;
+  color: #004080;
   background-color: transparent;
   text-decoration: none;
-  border: 1px solid black;
+  border: 1px solid #004080;
   border-radius: 5px;
   background: #F0F6F6;
   padding-left: 2px;

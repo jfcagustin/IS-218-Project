@@ -11,33 +11,33 @@
 <body>
 
 <form class="logout" style="position: absolute; top:2%; right:2%;">
-<p><img src="user.png" style="vertical-align: middle;"><?php
+<p style="color: #004080"><img src="user.png" style="vertical-align: middle;"><?php
 require('connect.php');
 include('auth_session.php');
 echo $_SESSION['lname'] . ', ' . $_SESSION['fname']; ?></p>
 <input type="submit" class="button" name="logout" value="Logout" formaction="logout.php" style="border:0;
-  background: #272635;
+  background: #008080;
   display: block;
   margin: auto;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #004080;
   padding: 7px 20px;
   outline: none;
   color: white;
-  border-radius: 210px;
+  border-radius: 210px;s
   transition: 0.25s;
   cursor: pointer;
   font-family: manropeextralight;">
 </form>
 
-<div class="welcome">
+<div style="color: #004080">
 <h1>Hey, <?php
 require('connect.php');
 include('auth_session.php');
 echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?>! Welcome to tasktrack.io!</h1>
 </div>
 
-<h2>To-Do:</h2>
+<h2 style="color: #004080">To-Do:</h2>
 
 <?php
 require('connect.php');
@@ -49,7 +49,7 @@ if(isset($_SESSION["email"])) {
     $query = "SELECT * FROM todos WHERE isdone=0 && owneremail='$email' ORDER BY duedate ASC";
     $result = mysqli_query($conn, $query);
 
-    echo '<table class="roundedCorners" bordercolor="black" border=6 bgcolor="#272635" style="color:white"> 
+    echo '<table class="roundedCorners" bordercolor="#004080" border=1 bgcolor="#008080" style="color:white"> 
             <tr>
             <th style="padding: 2px 4px;">Task Title</th>
             <th style="padding: 2px 4px;">Description</th>
@@ -76,7 +76,7 @@ while($rows = mysqli_fetch_assoc($result)){
     $query = "SELECT * FROM todos WHERE isdone=1 && owneremail='$email' ORDER BY duedate ASC";
     $result = mysqli_query($conn, $query);
 
-    echo '<table class="roundedCorners" bordercolor="black" border=6 bgcolor="#272635" style="color:white">
+    echo '<table class="roundedCorners" bordercolor="#004080" border=1 bgcolor="#008080" style="color:white">
             <tr>
             <th style="padding: 2px 4px;">Task Title</th>
             <th style="padding: 2px 4px;">Description</th>
@@ -85,7 +85,7 @@ while($rows = mysqli_fetch_assoc($result)){
 </tr>';
 ?>
 <?php echo "<a href='add.php".$rows['id']."'>Add New Task</a>"; ?>
-<h2 style="margin-top: 4em; ">Completed:</h2>
+<h2 style="margin-top: 4em; color: #004080;">Completed:</h2>
 
 <?php
 
